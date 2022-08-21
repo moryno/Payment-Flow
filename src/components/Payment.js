@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Billing from "./Billing";
 import Personal from "./Personal";
 
 const Container = styled.main`
@@ -55,7 +56,7 @@ const Payment = () => {
           <Button>Confirm Payment</Button>
         </TopButtonContainer>
         <CardContainer>
-          <Personal />
+          <Billing />
         </CardContainer>
         <BottomButtonContainer>
           <Button>Next</Button>
