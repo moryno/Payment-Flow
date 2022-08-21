@@ -1,4 +1,5 @@
 import Payment from "./Payment";
+import Personal from "./Personal";
 
 function App() {
   return (
