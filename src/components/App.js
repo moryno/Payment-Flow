@@ -6,7 +6,7 @@ import Personal from "./Personal";
 function App() {
   return (
     <div>
-      <Success />
+      <Payment />
     </div>
   );
 }

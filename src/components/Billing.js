@@ -3,6 +3,9 @@ const Wrapper = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 `;
 
 const Label = styled.label`

@@ -9,6 +9,9 @@ const Card = styled.section`
   border-radius: 0.5rem;
   background-color: #fff;
   color: #4e598c;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 `;
 
 const TopContainer = styled.article`

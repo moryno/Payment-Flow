@@ -25,6 +25,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   width: 50%;
   margin: auto;
+  position: relative;
 `;
 
 const Button = styled.button`
@@ -47,7 +48,13 @@ const TopButtonContainer = styled.article`
 
 const BottomButtonContainer = styled.article``;
 
-const CardContainer = styled.article``;
+const CardContainer = styled.article`
+  display: flex;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+`;
 
 const Title = styled.h3`
   font-family: "Product Sans";
@@ -79,7 +86,7 @@ const Payment = () => {
           <Link>Confirm Payment</Link>
         </TopButtonContainer>
         <CardContainer>
-          <Confirm />
+          <Billing />
         </CardContainer>
         <BottomButtonContainer>
           <Button bg="colored">Next</Button>
