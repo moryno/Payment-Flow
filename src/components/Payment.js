@@ -33,10 +33,11 @@ const Button = styled.button`
   padding: 0.6rem 3rem;
   background-color: ${(props) =>
     props.bg === "colored" ? "#F2C94C" : "transparent"};
-  color: ${(props) => (props.bg === "colored" ? "#fff" : "# #4e598c")};
+  color: ${(props) => (props.bg === "colored" ? "#fff" : "#4e598c")};
   font-weight: 600;
   margin-right: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 `;
 
 const TopButtonContainer = styled.article`
@@ -78,7 +79,7 @@ const Payment = () => {
           <Link>Confirm Payment</Link>
         </TopButtonContainer>
         <CardContainer>
-          <Billing />
+          <Confirm />
         </CardContainer>
         <BottomButtonContainer>
           <Button bg="colored">Next</Button>

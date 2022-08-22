@@ -2,19 +2,22 @@ import styled from "styled-components";
 
 const Card = styled.section`
   width: 90%;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 0.5rem;
   background-color: #fff;
+  color: #4e598c;
 `;
 
 const TopContainer = styled.article`
   background-color: #2f80ed;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2rem;
   color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 `;
@@ -33,9 +36,14 @@ const InfoWrapper = styled.article`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 2rem;
+  margin: 1rem 0;
 `;
 
-const Hr = styled.hr``;
+const Hr = styled.hr`
+  width: 90%;
+  margin: 1rem auto;
+  color: lightgray;
+`;
 
 const TotalWrapper = styled.article`
   display: flex;
@@ -43,6 +51,9 @@ const TotalWrapper = styled.article`
   padding: 0.5rem 2rem;
   border: 1px solid lightgray;
   border-radius: 0.2rem;
+  margin-top: 10rem;
+  width: 75%;
+  margin: 1rem auto;
 `;
 
 const TotalTitle = styled.span``;
