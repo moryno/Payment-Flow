@@ -9,10 +9,15 @@ const Container = styled.main`
     rgba(242, 201, 76, 0.2) 0%,
     rgba(242, 153, 74, 0.2) 100%
   );
-  width: 100vw;
+  background-image: -webkit-linear-gradient(
+    210deg,
+    rgba(242, 201, 76, 0.2) 50%,
+    rgba(242, 153, 74, 0.2) 50%
+  );
   display: flex;
   align-items: center;
   justify_content: center;
+  height: 100vh;
 `;
 
 const Wrapper = styled.section`
@@ -24,8 +29,14 @@ const Wrapper = styled.section`
 
 const Button = styled.button`
   border: none;
-  background-color: transparent;
-  color: #c2bfb8;
+  border-radius: 0.3rem;
+  padding: 0.6rem 3rem;
+  background-color: ${(props) =>
+    props.bg === "colored" ? "#F2C94C" : "transparent"};
+  color: ${(props) => (props.bg === "colored" ? "#fff" : "# #4e598c")};
+  font-weight: 600;
+  margin-right: 1rem;
+  margin-top: 1rem;
 `;
 
 const TopButtonContainer = styled.article`
@@ -44,6 +55,15 @@ const Title = styled.h3`
   font-size: 36px;
   line-height: 50px;
   color: #4e598c;
+  cursor: pointer;
+  margin-top: 10%;
+  margin-bottom: 2rem;
+`;
+
+const Link = styled.a`
+  color: #4e598c;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
 `;
 
 const Payment = () => {
@@ -52,15 +72,15 @@ const Payment = () => {
       <Wrapper>
         <Title>Complete your Purchase</Title>
         <TopButtonContainer>
-          <Button>Personal Info</Button>
-          <Button>Billing Info</Button>
-          <Button>Confirm Payment</Button>
+          <Link>Personal Info</Link>
+          <Link>Billing Info</Link>
+          <Link>Confirm Payment</Link>
         </TopButtonContainer>
         <CardContainer>
-          <Billing />
+          <Personal />
         </CardContainer>
         <BottomButtonContainer>
-          <Button>Next</Button>
+          <Button bg="colored">Next</Button>
           <Button>Cancel Payment</Button>
         </BottomButtonContainer>
       </Wrapper>
