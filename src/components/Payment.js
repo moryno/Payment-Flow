@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Billing from "./Billing";
+import { Confirm } from "./Confirm";
 import Personal from "./Personal";
 
 const Container = styled.main`
