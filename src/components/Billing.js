@@ -11,13 +11,22 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  padding: 0.5rem 0;
+  padding: 0.7rem;
   outline: none;
   margin-bottom: 1rem;
+  width: ${(props) =>
+    props.width === "half"
+      ? "40%"
+      : props.width === "quater"
+      ? "30%"
+      : props.width === "eighth"
+      ? "15%"
+      : "100%"};
+  box-sizing: border-box;
 `;
 
 const Select = styled.select`
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   outline: none;
 `;
 
@@ -26,7 +35,7 @@ const Option = styled.option``;
 const Billing = () => {
   return (
     <Wrapper>
-      <Label>Name of Card</Label>
+      <Label>Name on Card</Label>
       <Input placeholder="Opara Linus Ahmed" />
       <Label>Card Type</Label>
       <Select>
@@ -34,11 +43,11 @@ const Billing = () => {
         <Option>Master Card</Option>
       </Select>
       <Label>Card details</Label>
-      <Input placeholder="44960 44960 44960 44960" />
+      <Input width="half" placeholder="44960 44960 44960 44960" />
       <Label>Expiry date</Label>
-      <Input placeholder="04 / 23" />
+      <Input width="quater" placeholder="04 / 23" />
       <Label>CVV</Label>
-      <Input placeholder="923" />
+      <Input width="eighth" placeholder="923" />
     </Wrapper>
   );
 };

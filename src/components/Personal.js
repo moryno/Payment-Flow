@@ -10,17 +10,23 @@ const Label = styled.label`
   margin-bottom: 0.5rem;
 `;
 
-const Description = styled.span``;
+const Description = styled.span`
+  margin-bottom: 1rem;
+  color: #817e9e;
+`;
 
 const Input = styled.input`
-  padding: 0.5rem 0;
+  padding: 0.7rem;
   outline: none;
   margin-bottom: 1rem;
+  max-width: ${(props) => (props.width === "half" ? "60%" : "100%")};
+  box-sizing: border-box;
 `;
 
 const Select = styled.select`
   padding: 0.5rem 0;
   outline: none;
+  max-width: 20%;
 `;
 
 const Option = styled.option``;
@@ -34,13 +40,16 @@ const Personal = () => {
       <Description>
         The purchase receipt would be sent to this address
       </Description>
-      <Input placeholder="operalinusahmed@devmail.com" />
+      <Input
+        style={{ border: "none" }}
+        placeholder="Operalinusahmed@devmail.com"
+      />
       <Label>Address1</Label>
       <Input placeholder="The address of the user goes here" />
       <Label>Address2</Label>
       <Input placeholder="and here" />
       <Label>Local Government</Label>
-      <Input placeholder="Surulere" />
+      <Input width="half" placeholder="Surulere" />
       <Label>State</Label>
       <Select>
         <Option>Lagos</Option>

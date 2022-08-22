@@ -23,7 +23,7 @@ const Container = styled.main`
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   margin: auto;
 `;
 
@@ -64,6 +64,7 @@ const Link = styled.a`
   color: #4e598c;
   font-weight: 600;
   margin-bottom: 2.5rem;
+  cursor: pointer;
 `;
 
 const Payment = () => {
@@ -77,7 +78,7 @@ const Payment = () => {
           <Link>Confirm Payment</Link>
         </TopButtonContainer>
         <CardContainer>
-          <Personal />
+          <Billing />
         </CardContainer>
         <BottomButtonContainer>
           <Button bg="colored">Next</Button>
