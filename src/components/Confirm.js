@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+const Container = styled.main`
+  height: 100vh;
+`;
 const Card = styled.section`
   width: 50vw;
   height: 15rem;
@@ -9,9 +11,7 @@ const Card = styled.section`
   border-radius: 0.5rem;
   background-color: #fff;
   color: #4e598c;
-
-  height: 100vh;
-  display: flex;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 `;
 
 const TopContainer = styled.article`
@@ -65,26 +65,28 @@ const Total = styled.span``;
 
 export const Confirm = () => {
   return (
-    <Card>
-      <TopContainer>
-        <CardTitle>Item Name</CardTitle>
-        <CardTitle>Price</CardTitle>
-      </TopContainer>
-      <InfoContainer>
-        <InfoWrapper>
-          <InforDescription>Data science and usability</InforDescription>
-          <Price>50,000.00</Price>
-        </InfoWrapper>
-        <InfoWrapper>
-          <InforDescription>Shipping</InforDescription>
-          <Price>0.00</Price>
-        </InfoWrapper>
-        <Hr />
-        <TotalWrapper>
-          <TotalTitle>Total</TotalTitle>
-          <Total>50,000.00</Total>
-        </TotalWrapper>
-      </InfoContainer>
-    </Card>
+    <Container>
+      <Card>
+        <TopContainer>
+          <CardTitle>Item Name</CardTitle>
+          <CardTitle>Price</CardTitle>
+        </TopContainer>
+        <InfoContainer>
+          <InfoWrapper>
+            <InforDescription>Data science and usability</InforDescription>
+            <Price>50,000.00</Price>
+          </InfoWrapper>
+          <InfoWrapper>
+            <InforDescription>Shipping</InforDescription>
+            <Price>0.00</Price>
+          </InfoWrapper>
+          <Hr />
+          <TotalWrapper>
+            <TotalTitle>Total</TotalTitle>
+            <Total>50,000.00</Total>
+          </TotalWrapper>
+        </InfoContainer>
+      </Card>
+    </Container>
   );
 };

@@ -7,6 +7,11 @@ const Container = styled.main`
   margin: auto;
   width: 100vw;
   height: 100vh;
+  background-image: -webkit-linear-gradient(
+    120deg,
+    rgb(255, 255, 255) 50%,
+    rgb(253, 242, 219) 50%
+  );
 `;
 
 const Wrapper = styled.article`
@@ -17,6 +22,7 @@ const Wrapper = styled.article`
   padding: 1rem 3rem;
   box-sizing: border-box;
   margin: auto;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   border-radius: 0.2rem;
 `;
 
@@ -49,6 +55,7 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   align-self: center;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   margin-bottom: 0.5rem;
 `;
 
@@ -63,7 +70,7 @@ const Success = () => {
         <Description>
           Please check your email for details concerning this transaction
         </Description>
-        <Link>Return Home</Link>
+        <Link href="/">Return Home</Link>
       </Wrapper>
     </Container>
   );

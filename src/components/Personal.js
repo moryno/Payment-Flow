@@ -35,6 +35,7 @@ const Select = styled.select`
   padding: 0.7rem 1rem;
   outline: none;
 `;
+const Span = styled.span``;
 
 const Option = styled.option``;
 
@@ -43,14 +44,13 @@ const Personal = () => {
     <Wrapper>
       <Label>Name</Label>
       <Input placeholder="Opara Linus Ahmed" />
-      <Label>Email Address</Label>
+      <Label>
+        Email Address <Span style={{ color: "red" }}>*</Span>
+      </Label>
       <Description>
         The purchase receipt would be sent to this address
       </Description>
-      <Input
-        style={{ border: "none" }}
-        placeholder="Operalinusahmed@devmail.com"
-      />
+      <Input placeholder="Operalinusahmed@devmail.com" />
       <Label>Address1</Label>
       <Input placeholder="The address of the user goes here" />
       <Label>Address2</Label>

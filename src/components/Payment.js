@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import Slider from "./Slider";
@@ -9,7 +10,6 @@ const Container = styled.main`
     rgb(253, 242, 219) 50%
   );
 
-  height: 100vh;
   width: 100vw;
 `;
 
@@ -25,6 +25,7 @@ const Wrapper = styled.section`
 const TopButtonContainer = styled.article`
   display: flex;
   justify-content: space-between;
+  position: relative;
 `;
 
 const Title = styled.h3`
@@ -35,8 +36,14 @@ const Title = styled.h3`
   line-height: 50px;
   color: #4e598c;
   cursor: pointer;
-  ${"" /* margin-top: 10%; */}
+  margin-top: 10%;
   margin-bottom: 2rem;
+`;
+
+const Hr = styled.hr`
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
 `;
 
 const Link = styled.a`
@@ -47,16 +54,29 @@ const Link = styled.a`
 `;
 
 const Payment = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const onButtonCLick = (index) => {
+    setSlideIndex(index);
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>Complete your Purchase</Title>
         <TopButtonContainer>
-          <Link>Personal Info</Link>
-          <Link>Billing Info</Link>
-          <Link>Confirm Payment</Link>
+          <Link style={{ color: slideIndex === 0 && "#F2994A" }}>
+            Personal Info
+          </Link>
+          <Link style={{ color: slideIndex === 1 && "#F2994A" }}>
+            Billing Info
+          </Link>
+          <Link style={{ color: slideIndex === 2 && "#F2994A" }}>
+            Confirm Payment
+          </Link>
+          <Hr />
         </TopButtonContainer>
-        <Slider />
+        <Slider onClick={onButtonCLick} />
       </Wrapper>
     </Container>
   );

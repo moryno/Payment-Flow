@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import Billing from "./Billing";
 import { Confirm } from "./Confirm";
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 const BottomButtonContainer = styled.article`
   position: absolute;
-  bottom: ${(props) => (props.slideIndex === 0 ? "5%" : "50%")};
+  bottom: ${(props) => (props.slideIndex === 0 ? "20vh" : "50vh")};
 `;
 const Button = styled.button`
   border: none;
@@ -34,13 +34,15 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Slider = () => {
+const Slider = ({ onClick }) => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const handleClick = () => {
     setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    onClick(slideIndex + 1);
   };
-
+  const elementRef = useRef();
+  console.log(elementRef);
   return (
     <Container>
       <Wrapper slideIndex={slideIndex}>
@@ -48,11 +50,23 @@ const Slider = () => {
         <Billing />
         <Confirm />
       </Wrapper>
-      <BottomButtonContainer>
-        <Button onClick={handleClick} bg="colored">
-          Next
+      <BottomButtonContainer ref={elementRef} slideIndex={slideIndex}>
+        {slideIndex < 2 ? (
+          <Button onClick={handleClick} bg="colored">
+            Next
+          </Button>
+        ) : (
+          <Button
+            onClick={() => window.location.replace("/Success")}
+            bg="colored"
+          >
+            Pay
+          </Button>
+        )}
+
+        <Button onClick={() => window.location.replace("/")}>
+          Cancel Payment
         </Button>
-        <Button>Cancel Payment</Button>
       </BottomButtonContainer>
     </Container>
   );

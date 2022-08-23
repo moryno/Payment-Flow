@@ -1,11 +1,14 @@
 import Payment from "./Payment";
-import Slider from "./Slider";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Success from "../pages/Success";
 function App() {
   return (
-    <div>
-      <Payment />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Payment />} />
+        <Route path="/success" element={<Success />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -42,20 +42,32 @@ const BottomInput = styled.div`
   display: table-cell;
 `;
 
+const Span = styled.span``;
+
 const Billing = () => {
   return (
     <Wrapper>
-      <Label>Name on Card</Label>
+      <Label>
+        Name on Card <Span style={{ color: "red" }}>*</Span>
+      </Label>
       <Input placeholder="Opara Linus Ahmed" />
-      <Label>Card Type</Label>
+      <Label>
+        Card Type <Span style={{ color: "red" }}>*</Span>
+      </Label>
       <Select>
-        <Option>Visa</Option>
+        <Option>Visa </Option>
         <Option>Master Card</Option>
       </Select>
       <BottomLabel>
-        <Label style={{ marginRight: "12.6rem" }}>Card details</Label>
-        <Label style={{ marginRight: "5.2rem" }}>Expiry date</Label>
-        <Label>CVV</Label>
+        <Label style={{ marginRight: "12.6rem" }}>
+          Card details <Span style={{ color: "red" }}>*</Span>{" "}
+        </Label>
+        <Label style={{ marginRight: "5.2rem" }}>
+          Expiry date <Span style={{ color: "red" }}>*</Span>
+        </Label>
+        <Label>
+          CVV <Span style={{ color: "red" }}>*</Span>
+        </Label>
       </BottomLabel>
       <BottomInput>
         <Input
