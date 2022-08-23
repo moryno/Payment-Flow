@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 const BottomButtonContainer = styled.article`
   position: absolute;
-  bottom: 5%;
+  bottom: ${(props) => (props.slideIndex === 0 ? "5%" : "50%")};
 `;
 const Button = styled.button`
   border: none;

@@ -1,9 +1,8 @@
 import styled from "styled-components";
 const Wrapper = styled.article`
   width: 50vw;
-  display: flex;
+  display: table;
   flex-direction: column;
-
   height: 100vh;
   display: flex;
 `;
@@ -35,6 +34,14 @@ const Select = styled.select`
 
 const Option = styled.option``;
 
+const BottomLabel = styled.div`
+  display: flex;
+  margin-top: 1rem;
+`;
+const BottomInput = styled.div`
+  display: table-cell;
+`;
+
 const Billing = () => {
   return (
     <Wrapper>
@@ -45,12 +52,23 @@ const Billing = () => {
         <Option>Visa</Option>
         <Option>Master Card</Option>
       </Select>
-      <Label>Card details</Label>
-      <Input width="half" placeholder="44960 44960 44960 44960" />
-      <Label>Expiry date</Label>
-      <Input width="quater" placeholder="04 / 23" />
-      <Label>CVV</Label>
-      <Input width="eighth" placeholder="923" />
+      <BottomLabel>
+        <Label style={{ marginRight: "12.6rem" }}>Card details</Label>
+        <Label style={{ marginRight: "5.2rem" }}>Expiry date</Label>
+        <Label>CVV</Label>
+      </BottomLabel>
+      <BottomInput>
+        <Input
+          style={{ width: "50%", marginRight: "1rem" }}
+          placeholder="44960 44960 44960 44960"
+        />
+        <Input
+          style={{ width: "28%", marginRight: "1rem" }}
+          placeholder="04 / 23"
+        />
+
+        <Input style={{ width: "16%" }} placeholder="923" />
+      </BottomInput>
     </Wrapper>
   );
 };

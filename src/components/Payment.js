@@ -4,9 +4,9 @@ import Slider from "./Slider";
 
 const Container = styled.main`
   background-image: -webkit-linear-gradient(
-    210deg,
-    rgba(242, 201, 76, 0.2) 50%,
-    rgba(242, 153, 74, 0.2) 50%
+    120deg,
+    rgb(255, 255, 255) 50%,
+    rgb(253, 242, 219) 50%
   );
 
   height: 100vh;
