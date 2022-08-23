@@ -1,11 +1,10 @@
 import styled from "styled-components";
 const Wrapper = styled.article`
-  width: 100%;
-  display: flex;
+  display: table;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
 `;
 
 const Label = styled.label`
@@ -22,14 +21,19 @@ const Input = styled.input`
   padding: 0.7rem;
   outline: none;
   margin-bottom: 1rem;
-  max-width: ${(props) => (props.width === "half" ? "60%" : "100%")};
+
   box-sizing: border-box;
 `;
-
+const BottomLabel = styled.div`
+  display: flex;
+`;
+const BottomInput = styled.div`
+  display: table-cell;
+  justify-content: space-between;
+`;
 const Select = styled.select`
-  padding: 0.5rem 0;
+  padding: 0.7rem 1rem;
   outline: none;
-  max-width: 20%;
 `;
 
 const Option = styled.option``;
@@ -51,15 +55,23 @@ const Personal = () => {
       <Input placeholder="The address of the user goes here" />
       <Label>Address2</Label>
       <Input placeholder="and here" />
-      <Label>Local Government</Label>
-      <Input width="half" placeholder="Surulere" />
-      <Label>State</Label>
-      <Select>
-        <Option>Lagos</Option>
-        <Option>Abuja</Option>
-        <Option>Cairo</Option>
-        <Option>Nairobi</Option>
-      </Select>
+      <BottomLabel>
+        <Label style={{ marginRight: "57%" }}>Local Government </Label>
+        <Label>State</Label>
+      </BottomLabel>
+
+      <BottomInput>
+        <Input
+          style={{ marginRight: "3.6rem", width: "70%" }}
+          placeholder="Surulere"
+        />
+        <Select>
+          <Option>Lagos</Option>
+          <Option>Abuja</Option>
+          <Option>Cairo</Option>
+          <Option>Nairobi</Option>
+        </Select>
+      </BottomInput>
     </Wrapper>
   );
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.section`
-  width: 90%;
+  width: 50vw;
   height: 15rem;
   display: flex;
   flex-direction: column;
@@ -9,9 +9,9 @@ const Card = styled.section`
   border-radius: 0.5rem;
   background-color: #fff;
   color: #4e598c;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+
+  height: 100vh;
+  display: flex;
 `;
 
 const TopContainer = styled.article`

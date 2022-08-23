@@ -1,11 +1,11 @@
 import styled from "styled-components";
 const Wrapper = styled.article`
-  width: 100%;
+  width: 50vw;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+
+  height: 100vh;
+  display: flex;
 `;
 
 const Label = styled.label`
