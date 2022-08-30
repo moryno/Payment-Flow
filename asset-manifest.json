@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/Payment-Flow/static/js/main.b2076122.js",
+    "index.html": "/Payment-Flow/index.html",
+    "main.b2076122.js.map": "/Payment-Flow/static/js/main.b2076122.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b2076122.js"
+  ]
+}
