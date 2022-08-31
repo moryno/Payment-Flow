@@ -2,7 +2,6 @@
  
   "name": "payment-flow",
  
-  "homepage": "https://moryno.github.io/Payment-Flow",
  
   "version": "0.1.0",
  
@@ -44,10 +43,7 @@
    
   "predeploy": "npm run build",
  
-   
-  "deploy": "gh-pages -d build",
- 
-   
+      
   "start": "react-scripts start",
  
    
@@ -116,13 +112,6 @@
  
    
   ]
- 
-  },
- 
-  "devDependencies": {
- 
-   
-  "gh-pages": "^4.0.0"
  
   }
 }
