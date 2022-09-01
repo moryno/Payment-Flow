@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   transform: translateX(${(props) => props.slideIndex * -50}vw);
-  transition: all 1.5s ease;
+  transition: all 0.1s ease;
   align-items: center;
 `;
 const BottomButtonContainer = styled.article`
